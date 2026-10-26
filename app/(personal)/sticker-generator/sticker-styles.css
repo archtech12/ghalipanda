@@ -1,0 +1,22 @@
+/* Premium Selection Color */
+::selection {
+  @apply bg-brand-500/30 text-brand-950 dark:bg-brand-400/40 dark:text-brand-50;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  @apply bg-white/70 dark:bg-charcoal/70 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-glass;
+}
+
+.glass-card {
+  @apply bg-white/40 dark:bg-charcoal/40 backdrop-blur-lg border border-white/30 dark:border-white/10 shadow-glass transition-all hover:shadow-glass-lg hover:-translate-y-1;
+}
+
+/* Text gradients */
+.text-gradient-gold {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600;
+}
+
+.text-gradient-brand {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 dark:from-brand-400 dark:to-brand-300;
+}

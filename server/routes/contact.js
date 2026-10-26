@@ -1,0 +1,14 @@
+const express = require('express');
+const router = express.Router();
+const { getContact, createContact, updateContact, sendMessage } = require('../controllers/contactController');
+const { protect, admin } = require('../middleware/auth');
+
+// Public routes
+router.route('/').get(getContact);
+router.route('/send').post(sendMessage);
+
+// Private routes
+router.route('/').post(protect, admin, createContact);
+router.route('/:id').put(protect, admin, updateContact);
+
+module.exports = router;
