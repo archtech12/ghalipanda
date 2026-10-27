@@ -31,7 +31,7 @@ export default function IndexRoute() {
     title: 'Hon. Dr. Ghali Panda',
   }
 
-  const featuredProjects = ['project-1', 'project-5', 'project-10']
+  const featuredProjects = ['project-1', 'project-5', 'project-9']
     .map(id => projects.find(project => project._id === id))
     .filter((project): project is Project => Boolean(project))
 
@@ -202,20 +202,20 @@ export default function IndexRoute() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center transform hover:scale-110 transition-transform duration-300">
-              <div className="text-5xl md:text-6xl font-bold mb-2">40,800+</div>
-              <div className="text-green-200 text-sm md:text-base">Relief Grain Bags</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">18</div>
+              <div className="text-green-200 text-sm md:text-base">Scorecard Projects</div>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform duration-300">
-              <div className="text-5xl md:text-6xl font-bold mb-2">20</div>
-              <div className="text-green-200 text-sm md:text-base">Projects Featured</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">60</div>
+              <div className="text-green-200 text-sm md:text-base">Nursing & Midwifery Scholars</div>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform duration-300">
               <div className="text-5xl md:text-6xl font-bold mb-2">3</div>
               <div className="text-green-200 text-sm md:text-base">LGAs Served (Gaya, Ajingi, Albasu)</div>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform duration-300">
-              <div className="text-5xl md:text-6xl font-bold mb-2">620+</div>
-              <div className="text-green-200 text-sm md:text-base">Solar Streetlights</div>
+              <div className="text-5xl md:text-6xl font-bold mb-2">1,500+</div>
+              <div className="text-green-200 text-sm md:text-base">Solar Street Lights</div>
             </div>
           </div>
         </div>

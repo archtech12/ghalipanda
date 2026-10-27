@@ -67,27 +67,8 @@ export default function ConstituencyPage() {
                 </p>
                 <p className="mb-6">
                   Since taking office, Hon. Dr. Ghali Panda has championed initiatives that
-                  focus on clean water, healthcare access, rural electrification, and agricultural support. His legislative work emphasizes rural infrastructure, farm input subsidies, healthcare facilities, and empowering youth and women to build lasting self-reliance.
+                  the scorecard documents work in education, clean water, road construction, agriculture, livelihoods, healthcare, and employment.
                 </p>
-
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
-                  Key Policy Focus Areas
-                </h3>
-                <ul className="list-disc pl-6 space-y-2 mb-6">
-                  <li>Building and renovating classrooms, deploying ICT hubs, and supporting scholarships</li>
-                  <li>Expanding access to clean water and healthcare</li>
-                  <li>Improving roads, bridges, street lighting, and electricity access</li>
-                  <li>Supporting farmers with fertilizer, herbicides, and tractors</li>
-                  <li>Creating livelihood opportunities for women and young people</li>
-                </ul>
-
-                <div className="bg-green-50 dark:bg-gray-700 rounded-lg p-6 mb-6">
-                  <blockquote className="text-lg italic text-gray-900 dark:text-white">
-                    "My representation is anchored in empowering youth, women, and families across
-                    our constituency—delivering vital support such as food aid, education
-                    infrastructure, and economic-opportunity programmes."
-                  </blockquote>
-                </div>
               </div>
             </div>
             <div className="lg:col-span-1">

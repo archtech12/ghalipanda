@@ -37,7 +37,7 @@ export const legislativeData = [
         titleHA: 'Kudirin Dokar Tallafin Taki da Kayan Noma',
         description: 'Advocating for direct federal subsidies on fertilizer, hybrid seeds, and irrigation pumps for smallholder farmers.',
         category: 'Legislative',
-        images: ['/assets/fertilizer-1800.jpg'],
+        images: ['/assets/fertilizers.jpg'],
         status: 'In Committee',
         date: '2024',
     },

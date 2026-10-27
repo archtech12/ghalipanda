@@ -25,32 +25,32 @@ const visionItems = [
   {
     icon: 'school',
     title: 'Education & Human Capital',
-    desc: 'Revitalizing community schools, awarding nursing scholarships, and building modern blocks across Gaya, Ajingi, and Albasu.',
+    desc: 'Classroom blocks, one equipped ICT center, 13+ schools under renovation, and 60 nursing and midwifery scholarships.',
   },
   {
     icon: 'diversity_3',
     title: 'Youth & Women Empowerment',
-    desc: 'Empowerment programs distributing motorcycles, sewing machines, and business grants for self-reliance.',
+    desc: 'Motorcycles, grinding machines, pasta-making equipment, and SME grants supporting livelihoods.',
   },
   {
     icon: 'water_drop',
-    title: 'Water & Health',
-    desc: 'Construction of over 120 motorized solar boreholes and new cottage hospitals to bring healthcare close to home.',
+    title: 'Clean Water & Healthcare',
+    desc: 'Industrial 20,000-litre solar boreholes, repairs to over 30 boreholes, and the Faragai hospital project.',
   },
   {
     icon: 'agriculture',
     title: 'Agriculture & Food Security',
-    desc: 'Subsidized fertilizer distributions, modern farming inputs, and large-scale grain relief initiatives.',
+    desc: 'Fertilizer support for thousands of farmers, 4,000 insecticide and herbicide pieces, and tractors.',
   },
   {
     icon: 'solar_power',
-    title: 'Rural Electrification & Clean Energy',
-    desc: 'Installation of over 200 all-in-one solar streetlights and grid transformer replacements across rural communities.',
+    title: 'Roads & Solar Street Lighting',
+    desc: 'A 5 km Faragai road, a 2 km Panda bypass, and over 1,500 solar street lights.',
   },
   {
     icon: 'home_work',
-    title: 'Infrastructure & Connectivity',
-    desc: 'Advocating and executing road rehabilitations, drainage construction, and bridge connections for economic vitality.',
+    title: 'Employment & Career Placements',
+    desc: 'Employment and scholarship placements across security, oil and gas, aviation, and healthcare.',
   },
 ]
 
@@ -60,7 +60,7 @@ export default function AboutPage() {
     content: `<p>Hon. Dr. Ghali Mustapha Tijjani Panda was born on 13 August 1980 in Panda Town, Albasu Local Government Area, Kano State. He began his education at Panda Central Primary School and attended Usman Danfodio University, where he served as a Student Union leader and graduated in 2005.</p>
     <p>After completing his NYSC at Diamond Bank, where he was retained, he earned an MSc in Oil and Gas from Glasgow Caledonian University in 2009. He later worked as Area Manager (North West) for Texaco/MRS Oil and Gas and completed a PhD in Oil and Gas at Robert Gordon University in 2014.</p>
     <p>Before entering politics, Dr. Ghali was an oil and gas consultant and contributed to Nigeria's National Gas Expansion Programme. In 2023, he was elected on the platform of the All Progressives Congress (APC) to represent Gaya, Ajingi, and Albasu Federal Constituency in the House of Representatives.</p>
-    <p>His public service includes legislative advocacy and community projects focused on clean water, rural electrification, healthcare, education, agriculture, and economic opportunity across Gaya, Ajingi, and Albasu.</p>`,
+    <p>His public service includes legislative advocacy and community projects focused on clean water, roads, healthcare, education, agriculture, and career opportunities across Albasu, Gaya, and Ajingi.</p>`,
     quickFacts: defaultQuickFacts,
   }
 
