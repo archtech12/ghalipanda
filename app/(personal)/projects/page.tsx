@@ -59,21 +59,6 @@ export default function ProjectsPage() {
   const projects = staticProjects as Project[]
   const loading = false
 
-  useEffect(() => {
-    setShareUrl(window.location.href)
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search)
-      const catParam = params.get('category')
-      if (catParam) {
-        // Find matching category case-insensitively or partial
-        const match = categories.find(c => c.toLowerCase() === catParam.toLowerCase() || c.toLowerCase().includes(catParam.toLowerCase()))
-        if (match) {
-          setActiveCategory(match)
-        }
-      }
-    }
-  }, [categories])
-  
   const toggleLang = () => setLang(prev => prev === 'en' ? 'ha' : 'en')
 
   const copyToClipboard = (text: string) => {
@@ -91,6 +76,22 @@ export default function ProjectsPage() {
     const cats = new Set(displayProjects.map(p => p.category))
     return ['All', ...Array.from(cats)]
   }, [displayProjects])
+
+  // Must come after `categories` is declared
+  useEffect(() => {
+    setShareUrl(window.location.href)
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const catParam = params.get('category')
+      if (catParam) {
+        // Find matching category case-insensitively or partial
+        const match = categories.find(c => c.toLowerCase() === catParam.toLowerCase() || c.toLowerCase().includes(catParam.toLowerCase()))
+        if (match) {
+          setActiveCategory(match)
+        }
+      }
+    }
+  }, [categories])
 
   const filteredProjects = useMemo(() => {
     return displayProjects.filter(project => {
