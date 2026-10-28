@@ -1,6 +1,7 @@
 'use client'
 
 import { HomePage } from '@/components/HomePage'
+import { ConstituencyBlueprint } from '@/components/ConstituencyBlueprint'
 import { ContactSection } from '@/components/ContactSection'
 import { useState } from 'react'
 import Link from 'next/link'
@@ -9,6 +10,7 @@ import { ProjectModal } from '@/components/ProjectModal'
 
 import { news as staticNews } from '@/lib/news'
 import { projects as staticProjects } from '@/lib/projects'
+import { visionContent } from '@/lib/data'
 
 interface Project {
   _id: string
@@ -39,6 +41,9 @@ export default function IndexRoute() {
     <div>
       <HomePage data={mockData} />
       
+      {/* Strategic Constituency Blueprint */}
+      <ConstituencyBlueprint />
+
       {/* Featured Projects Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8">
@@ -184,38 +189,67 @@ export default function IndexRoute() {
         </div>
       </section>
 
-      {/* Community Impact Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-green-700 to-green-900 text-white relative overflow-hidden">
+      {/* Community Impact & Scorecard Section */}
+      <section className="py-14 sm:py-20 md:py-24 bg-gradient-to-br from-green-950 via-green-900 to-green-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-400 rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-2000"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
-              Making a Real Difference
+          <div className="text-center mb-14">
+            <span className="inline-block px-4 py-1.5 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 rounded-full text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur">
+              VERIFIED SCORECARD IMPACT
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight">
+              Measurable Progress Across Every Ward
             </h2>
-            <p className="text-green-100 text-base sm:text-lg max-w-3xl mx-auto">
-              Through dedicated service and community-focused initiatives, we're creating lasting
-              positive change
+            <p className="text-green-100/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Real results documented from Albasu, Gaya, and Ajingi LGAs—delivering lasting dividends of democracy.
             </p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <div className="text-center transform hover:scale-110 transition-transform duration-300">
-              <div className="text-5xl md:text-6xl font-bold mb-2">18</div>
-              <div className="text-green-200 text-sm md:text-base">Scorecard Projects</div>
+
+          {/* 6 Key Scorecard Counters */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 text-center transform hover:-translate-y-1.5 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">18</div>
+              <div className="text-emerald-200 text-xs sm:text-sm font-semibold">Scorecard Projects</div>
             </div>
-            <div className="text-center transform hover:scale-110 transition-transform duration-300">
-              <div className="text-5xl md:text-6xl font-bold mb-2">60</div>
-              <div className="text-green-200 text-sm md:text-base">Nursing & Midwifery Scholars</div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 text-center transform hover:-translate-y-1.5 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-amber-300 mb-2">1,500+</div>
+              <div className="text-emerald-200 text-xs sm:text-sm font-semibold">Solar Street Lights</div>
             </div>
-            <div className="text-center transform hover:scale-110 transition-transform duration-300">
-              <div className="text-5xl md:text-6xl font-bold mb-2">3</div>
-              <div className="text-green-200 text-sm md:text-base">LGAs Served (Gaya, Ajingi, Albasu)</div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 text-center transform hover:-translate-y-1.5 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">60</div>
+              <div className="text-emerald-200 text-xs sm:text-sm font-semibold">Nursing Scholars</div>
             </div>
-            <div className="text-center transform hover:scale-110 transition-transform duration-300">
-              <div className="text-5xl md:text-6xl font-bold mb-2">1,500+</div>
-              <div className="text-green-200 text-sm md:text-base">Solar Street Lights</div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 text-center transform hover:-translate-y-1.5 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-cyan-300 mb-2">30+</div>
+              <div className="text-emerald-200 text-xs sm:text-sm font-semibold">Solar Boreholes</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 text-center transform hover:-translate-y-1.5 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">1,000+</div>
+              <div className="text-emerald-200 text-xs sm:text-sm font-semibold">SME Cash Grants</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 text-center transform hover:-translate-y-1.5 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-emerald-300 mb-2">3</div>
+              <div className="text-emerald-200 text-xs sm:text-sm font-semibold">Federal LGAs</div>
+            </div>
+          </div>
+
+          {/* Vision Quote Card */}
+          <div className="mt-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto text-center shadow-2xl">
+            <span className="material-symbols-outlined text-4xl text-emerald-300 mb-3 opacity-80">
+              format_quote
+            </span>
+            <p className="text-green-50 text-base sm:text-lg italic leading-relaxed">
+              &ldquo;{visionContent}&rdquo;
+            </p>
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <div className="h-0.5 w-8 bg-emerald-400"></div>
+              <p className="text-sm font-bold text-white uppercase tracking-wider">
+                Hon. Dr. Ghali Mustapha Tijjani (PhD)
+              </p>
+              <div className="h-0.5 w-8 bg-emerald-400"></div>
             </div>
           </div>
         </div>

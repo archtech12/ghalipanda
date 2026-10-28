@@ -61,7 +61,18 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     setShareUrl(window.location.href)
-  }, [])
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const catParam = params.get('category')
+      if (catParam) {
+        // Find matching category case-insensitively or partial
+        const match = categories.find(c => c.toLowerCase() === catParam.toLowerCase() || c.toLowerCase().includes(catParam.toLowerCase()))
+        if (match) {
+          setActiveCategory(match)
+        }
+      }
+    }
+  }, [categories])
   
   const toggleLang = () => setLang(prev => prev === 'en' ? 'ha' : 'en')
 
@@ -146,6 +157,32 @@ export default function ProjectsPage() {
             >
               Hausa
             </button>
+          </div>
+        </div>
+
+        {/* Verified Scorecard Summary Ribbon */}
+        <div className="bg-emerald-950/90 border-t border-emerald-800/60 backdrop-blur-md text-white py-3 px-4">
+          <div className="container mx-auto flex flex-wrap items-center justify-around gap-4 text-xs sm:text-sm font-semibold text-center">
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-emerald-400 text-base">verified</span>
+              <span><strong>18</strong> Verified Projects</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-amber-300 text-base">solar_power</span>
+              <span><strong>1,500+</strong> Solar Lights</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-cyan-300 text-base">water_drop</span>
+              <span><strong>30+</strong> Solar Boreholes</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-purple-300 text-base">school</span>
+              <span><strong>60</strong> Nursing Scholars</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-rose-300 text-base">diversity_3</span>
+              <span><strong>1,000+</strong> SME Grants</span>
+            </div>
           </div>
         </div>
       </div>
@@ -290,9 +327,16 @@ export default function ProjectsPage() {
 
                       {/* Content */}
                       <div className="p-6 flex flex-col flex-grow relative">
-                        <div className="flex items-center gap-2 mb-3 text-xs font-medium text-gray-400 uppercase tracking-widest">
-                          <span className="material-symbols-outlined text-[16px] text-green-600">calendar_today</span>
-                          {project.date}
+                        <div className="flex items-center justify-between gap-2 mb-3">
+                          <div className="flex items-center gap-1.5 text-xs font-medium text-gray-400 uppercase tracking-widest">
+                            <span className="material-symbols-outlined text-[16px] text-green-600">calendar_today</span>
+                            {project.date}
+                          </div>
+                          {project.status && (
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-50 text-green-700 border border-green-200 shrink-0">
+                              {project.status}
+                            </span>
+                          )}
                         </div>
 
                         <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-green-700 transition-colors">
@@ -301,12 +345,18 @@ export default function ProjectsPage() {
 
                         <div className="w-12 h-1 bg-green-100 rounded-full mb-4 group-hover:w-20 group-hover:bg-green-500 transition-all duration-300"></div>
 
-                        <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-4">
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow line-clamp-4">
                           {project.description}
                         </p>
                         {project.impact && (
-                          <p className="mb-4 text-xs font-semibold text-green-800">
-                            Impact: <span className="font-medium text-gray-600">{project.impact}</span>
+                          <p className="mb-2 text-xs font-semibold text-green-800">
+                            Impact: <span className="font-medium text-gray-700">{project.impact}</span>
+                          </p>
+                        )}
+                        {project.location && (
+                          <p className="mb-4 text-xs text-gray-500 flex items-start gap-1">
+                            <span className="material-symbols-outlined text-[15px] text-green-600 shrink-0 mt-0.5">location_on</span>
+                            <span className="line-clamp-2">{project.location}</span>
                           </p>
                         )}
 
