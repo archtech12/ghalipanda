@@ -156,21 +156,14 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             <p className="text-gray-600 leading-relaxed text-base md:text-lg">
               {project.description}
             </p>
-            {(project.impact || project.location) && (
-              <div className="mt-6 grid gap-3 rounded-xl bg-gray-50 p-4">
-                {project.impact && (
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-gray-500">Impact</p>
-                    <p className="mt-1 text-sm font-semibold text-gray-900">{project.impact}</p>
-                  </div>
-                )}
-                {project.location && (
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-gray-500">Locations</p>
-                    <p className="mt-1 text-sm text-gray-700">{project.location}</p>
-                  </div>
-                )}
+            {project.impact && (
+              <div className="mt-5 rounded-xl bg-green-50 p-4">
+                <p className="text-xs font-bold uppercase tracking-wide text-green-800">Scorecard impact</p>
+                <p className="mt-1 font-semibold text-gray-900">{project.impact}</p>
               </div>
+            )}
+            {project.location && (
+              <p className="mt-4 text-sm text-gray-600"><span className="font-bold text-gray-800">Location:</span> {project.location}</p>
             )}
           </div>
 

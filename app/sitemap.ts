@@ -1,36 +1,18 @@
-import { MetadataRoute } from 'next'
-import { projects } from '@/lib/projects'
+import type {MetadataRoute} from 'next'
+import {projects} from '@/lib/projects'
+
+const baseUrl = 'https://ghalipanda.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ghalipanda.com'
-  
-  const staticRoutes = [
-    '',
-    '/about',
-    '/projects',
-    '/news',
-    '/campaign',
-    '/constituency',
-    '/gallery',
-    '/legislative',
-    '/volunteer',
-    '/support',
-    '/applications',
-    '/contact',
-    '/sticker-generator'
-  ].map((route) => ({
+  const staticRoutes = ['', '/about', '/constituency', '/projects', '/gallery', '/contact'].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
+    priority: route === '' ? 1 : 0.7,
   }))
-
-  const projectRoutes = projects.map((p) => ({
-    url: `${baseUrl}/projects/${p._id}`,
-    lastModified: new Date(),
+  const projectRoutes = projects.map((project) => ({
+    url: `${baseUrl}/projects/${project._id}`,
     changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    priority: 0.5,
   }))
-
   return [...staticRoutes, ...projectRoutes]
 }

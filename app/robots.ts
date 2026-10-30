@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'], // Hide API and Admin routes from crawlers
     },
-    sitemap: 'https://ghalipanda.com/sitemap.xml',
+    sitemap: 'https://ghalipanda.vercel.app/sitemap.xml',
   }
 }

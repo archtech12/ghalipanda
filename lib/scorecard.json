@@ -1,0 +1,17 @@
+{
+  "primarySource": "../grok_report.pdf",
+  "constituency": ["Albasu", "Gaya", "Ajingi"],
+  "state": "Kano State",
+  "representative": "Hon. Dr. Ghali Mustapha Tijjani",
+  "office": "Member, House of Representatives, 10th National Assembly",
+  "committee": "Chairman, House Committee on Ethics and Privileges",
+  "termStart": 2023,
+  "reelectionYear": 2027,
+  "population": "Over 300,000 residents",
+  "vision": "One Constituency, Forward Together",
+  "homepageMetrics": [
+    {"projectId": "ghali-infrastructure-solar-lights", "label": "Solar street lights"},
+    {"projectId": "ghali-education-nursing-scholarships", "label": "Nursing scholarships"},
+    {"projectId": "ghali-water-borehole-repairs", "label": "Boreholes repaired"}
+  ]
+}
