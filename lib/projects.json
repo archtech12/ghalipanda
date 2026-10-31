@@ -93,7 +93,7 @@
     "impact": "5 km of road constructed",
     "location": "Kwanar Nera to Chilori to Magamaru, Faragai Ward, Albasu LGA",
     "category": "Infrastructure",
-    "images": ["/images/projects/mugamu-cillori-road.jpg", "/images/projects/chilori-road-1.jpg", "/images/projects/chilori-bridge.jpg"],
+    "images": ["/images/projects/mugamu-cillori-road.jpg", "/images/projects/chilori-road-1.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
@@ -117,7 +117,7 @@
     "impact": "Improved connectivity and flood control",
     "location": "Hamdullahi and Panda communities",
     "category": "Infrastructure",
-    "images": [],
+    "images": ["/images/projects/chilori-bridge.jpg"],
     "status": "Completed + Ongoing",
     "date": "2024–2025"
   },
