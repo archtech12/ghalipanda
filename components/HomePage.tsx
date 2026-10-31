@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { projectCount } from '@/lib/projects'
 
 interface HomePageProps {
   data?: { title?: string }
@@ -9,16 +10,17 @@ export function HomePage({ data }: HomePageProps) {
   const title = data?.title ?? 'Hon. Dr. Ghali Mustapha Tijjani Panda'
 
   return (
-    <section className="bg-green-950 text-white">
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-green-950 via-green-900 to-green-800 pb-16 text-white sm:pb-24">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-10 [background-image:radial-gradient(#ffffff_0.7px,transparent_0.7px)] [background-size:18px_18px]" />
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-28">
         <div aria-hidden="true" className="pointer-events-none absolute -left-24 top-0 size-80 rounded-full bg-emerald-500/15 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 right-0 size-96 rounded-full bg-amber-300/10 blur-3xl" />
         <div className="relative z-10 order-2 text-center lg:order-1 lg:text-left">
           <p className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.14em] text-emerald-100">
-            Member, House of Representatives
+            Hon. Dr. Ghali Mustapha Tijjani
           </p>
           <h1 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            {title}
+            Member, <span className="bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">House of</span> Representatives
           </h1>
           <p className="mt-4 text-xl font-semibold text-emerald-200 sm:text-2xl">
             Service, opportunity, and progress for every community.
@@ -31,18 +33,18 @@ export function HomePage({ data }: HomePageProps) {
               href="/projects"
               className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-green-950 transition hover:bg-emerald-100"
             >
-              Explore projects
+              Explore Achievements
             </Link>
             <Link
-              href="/about"
+              href="/sticker-generator"
               className="inline-flex items-center justify-center rounded-lg border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
             >
-              About Ghali
+              Get Your Sticker
             </Link>
           </div>
         </div>
 
-        <div className="relative z-10 order-1 mx-auto w-full max-w-sm lg:order-2 lg:max-w-md">
+        <div className="relative z-10 order-1 mx-auto w-full max-w-sm lg:order-2 lg:max-w-[500px]">
           <div className="absolute inset-4 rounded-full bg-emerald-400/20 blur-2xl" aria-hidden="true" />
           <div className="relative aspect-square overflow-hidden rounded-full border-[10px] border-white/15 bg-green-900 shadow-2xl ring-1 ring-white/20">
             <Image
@@ -53,6 +55,14 @@ export function HomePage({ data }: HomePageProps) {
               sizes="(max-width: 1024px) 90vw, 420px"
               className="object-cover object-top transition-transform duration-700 hover:scale-105"
             />
+          </div>
+          <div className="absolute left-0 top-[15%] rounded-2xl border border-white/60 bg-white/95 p-4 text-gray-900 shadow-2xl backdrop-blur-xl sm:-left-8 sm:p-5">
+            <div className="text-2xl font-black leading-none text-green-900">{projectCount}</div>
+            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-gray-500">Documented Projects</div>
+          </div>
+          <div className="absolute bottom-[12%] right-0 rounded-2xl border border-white/60 bg-white/95 p-4 text-gray-900 shadow-2xl backdrop-blur-xl sm:-right-8 sm:p-5">
+            <div className="text-2xl font-black leading-none text-amber-600">300,000+</div>
+            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-gray-500">Residents Represented</div>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ProjectModal } from '@/components/ProjectModal'
+import { Timeline, timelineData } from '@/components/Timeline'
 
 import { news as staticNews } from '@/lib/news'
 import { projects as staticProjects } from '@/lib/projects'
@@ -42,18 +43,15 @@ export default function IndexRoute() {
     <div>
       <HomePage data={mockData} />
       
-      {/* Strategic Constituency Blueprint */}
-      <ConstituencyBlueprint />
-
       {/* Featured Projects Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">
-              OUR INITIATIVES
+              LATEST OPPORTUNITIES
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">
-              Transforming Communities
+              Recent Projects & Opportunities
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Empowering lives through dedicated projects and programs across Gaya, Ajingi, and Albasu Federal Constituency
@@ -119,14 +117,18 @@ export default function IndexRoute() {
         </div>
       </section>
 
+      {/* Strategic Framework */}
+      <ConstituencyBlueprint />
+
 
       {/* Gallery Strip */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-8 sm:mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-gray-900">Moments From the Constituency</h2>
+            <p className="mb-2 text-sm font-bold uppercase tracking-wider text-green-700">Transforming Communities</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-gray-900">Media Gallery</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A glimpse of programmes delivered across Gaya, Ajingi, and Albasu.
+              Visual proof of ongoing work to expand opportunity and improve communities across Gaya, Ajingi, and Albasu.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
@@ -242,7 +244,7 @@ export default function IndexRoute() {
               VERIFIED SCORECARD IMPACT
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight">
-              Measurable Progress Across Every Ward
+              Making a Real Difference
             </h2>
             <p className="text-green-100/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               Real results documented from Albasu, Gaya, and Ajingi LGAs—delivering lasting dividends of democracy.
@@ -305,27 +307,40 @@ export default function IndexRoute() {
           </div>
           <div>
             <span className="inline-block px-4 py-1.5 bg-green-100 text-green-800 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-              The Representative
+              Meet Your Representative
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">{scorecard.representative}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Championing the People&apos;s Mandate</h2>
+            <p className="mb-3 text-lg font-semibold text-green-800">{scorecard.representative}</p>
             <p className="text-gray-700 leading-relaxed mb-3">
               {scorecard.office}, representing {scorecard.constituency.join(', ')} Federal Constituency, {scorecard.state}.
               Serving since {scorecard.termStart}.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">{scorecard.committee}.</p>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 rounded-lg bg-green-700 px-6 py-3 font-semibold text-white transition hover:bg-green-800"
-            >
-              Read the full biography <span className="material-symbols-outlined text-lg">arrow_forward</span>
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 rounded-lg bg-green-800 px-6 py-3 font-semibold text-white transition hover:bg-green-900"
+              >
+                Read Full Biography <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-green-800 px-6 py-3 font-semibold text-green-900 transition hover:bg-green-50"
+              >
+                Constituency Office
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* My Journey */}
+      <Timeline items={timelineData} />
+
       {/* Call to Action */}
       <section className="py-12 sm:py-16 bg-green-700 text-white">
         <div className="container mx-auto px-4 md:px-8 text-center max-w-3xl">
+          <p className="mb-2 text-sm font-bold uppercase tracking-[0.16em] text-green-100">Show Your Support</p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">{scorecard.vision}</h2>
           <p className="text-green-100 mb-8">
             Volunteer, create a supporter sticker, or get in touch with the office.
@@ -335,7 +350,7 @@ export default function IndexRoute() {
               Join as a volunteer
             </Link>
             <Link href="/sticker-generator" className="rounded-lg border border-white/40 px-6 py-3 font-bold text-white transition hover:bg-white/10">
-              Create your sticker
+              Create Custom Sticker
             </Link>
             <Link href="/supporter-card" className="rounded-lg border border-white/40 px-6 py-3 font-bold text-white transition hover:bg-white/10">
               Get a support card
