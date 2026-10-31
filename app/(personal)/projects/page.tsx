@@ -225,78 +225,73 @@ export default function ProjectsPage() {
             </button>
           </div>
         ) : (
-          <div className="space-y-10">
+          <div className="space-y-16">
             {groupedProjects.map(([category, items]) => (
               <section key={category} aria-labelledby={`cat-${category}`}>
-                <div className="mb-4 flex items-center gap-3 border-b border-gray-200 pb-3">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-full ${getCategoryColor(category)}`}>
-                    <span className="material-symbols-outlined text-[22px]">{getCategoryIcon(category)}</span>
+                <div className="mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-full ${getCategoryColor(category)}`}>
+                    <span className="material-symbols-outlined">{getCategoryIcon(category)}</span>
                   </div>
-                  <h2 id={`cat-${category}`} className="text-xl font-black uppercase tracking-tight text-gray-900 md:text-2xl">
+                  <h2 id={`cat-${category}`} className="text-3xl font-black uppercase tracking-tight text-gray-900">
                     {category}
                   </h2>
                   <span className="ml-auto rounded-full bg-gray-100 px-3 py-1 text-sm font-bold text-gray-600">
-                    {items.length}
+                    {items.length} Projects
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                   {items.map(project => (
                     <article
                       key={project._id}
-                      className="group flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                      className="group flex flex-col transform cursor-pointer overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]"
                     >
                       <button
                         type="button"
                         onClick={() => setSelectedProject({ ...project, title: titleOf(project) })}
                         aria-label={`View details for ${titleOf(project)}`}
-                        className="flex flex-1 text-left sm:flex-col"
+                        className="flex flex-1 flex-col text-left"
                       >
-                        {/* Thumbnail: side-by-side on mobile, banner from sm up */}
-                        <div className="relative w-24 shrink-0 self-stretch bg-gray-100 sm:h-32 sm:w-full">
+                        <div className="relative h-64 w-full overflow-hidden bg-gray-100">
                           {project.images.length > 0 ? (
                             <>
                               <Image
                                 src={project.images[0]}
                                 alt={titleOf(project)}
                                 fill
-                                sizes="(max-width: 640px) 96px, (max-width: 1024px) 50vw, 25vw"
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
                               />
-                              {project.images.length > 1 && (
-                                <span className="absolute bottom-1 right-1 rounded-full bg-black/60 px-1.5 py-0.5 text-[10px] font-bold text-white">
-                                  +{project.images.length - 1}
-                                </span>
-                              )}
                             </>
                           ) : (
                             <div className={`flex h-full w-full items-center justify-center ${getCategoryColor(project.category).split(' ').slice(0, 2).join(' ')}`}>
-                              <span className="material-symbols-outlined text-4xl opacity-70">{getCategoryIcon(project.category)}</span>
+                              <span className="material-symbols-outlined text-6xl opacity-70">{getCategoryIcon(project.category)}</span>
                             </div>
                           )}
+                          <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/5" />
+                          <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-green-700 backdrop-blur-sm">{project.category}</span>
                         </div>
 
-                        <div className="flex min-w-0 flex-1 flex-col gap-1.5 p-3 sm:p-4">
-                          <div className="flex items-center justify-between gap-2 text-[11px] font-medium uppercase tracking-wider text-gray-400">
+                        <div className="flex flex-1 flex-col p-6">
+                          <div className="mb-3 flex items-center justify-between gap-2 text-sm text-gray-500">
                             <span className="flex items-center gap-1">
-                              <span className="material-symbols-outlined text-[14px] text-green-600">calendar_today</span>
+                              <span className="material-symbols-outlined text-base text-green-600">calendar_today</span>
                               {project.date}
                             </span>
                             {project.status && (
-                              <span className="shrink-0 rounded-full border border-green-200 bg-green-50 px-2 py-0.5 text-[10px] font-bold normal-case tracking-normal text-green-700">
+                              <span className="shrink-0 rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
                                 {project.status}
                               </span>
                             )}
                           </div>
-                          <h3 className="line-clamp-2 text-base font-bold leading-snug text-gray-900 transition-colors group-hover:text-green-700">
+                          <h3 className="mb-3 line-clamp-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-green-700">
                             {titleOf(project)}
                           </h3>
-                          <p className="line-clamp-2 text-xs font-semibold text-green-800">{project.impact}</p>
-                          <p className="hidden text-xs leading-relaxed text-gray-600 sm:line-clamp-2">{project.description}</p>
-                          <p className="flex items-start gap-1 text-xs text-gray-500">
-                            <span className="material-symbols-outlined mt-px shrink-0 text-[14px] text-green-600">location_on</span>
-                            <span className="line-clamp-1">{project.location}</span>
-                          </p>
+                          <p className="mb-4 line-clamp-3 flex-1 text-gray-600">{project.description}</p>
+                          <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+                            <span className="line-clamp-1 text-sm font-semibold text-green-800">{project.impact}</span>
+                            <span className="material-symbols-outlined text-green-700">arrow_forward</span>
+                          </div>
                         </div>
                       </button>
 
