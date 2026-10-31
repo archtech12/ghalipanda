@@ -52,6 +52,31 @@ export const TextControls = ({ data, onUpdate }: TextControlsProps) => {
     <div className="space-y-6">
 
       <fieldset>
+        <legend className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">Social format</legend>
+        <div className="grid grid-cols-3 gap-2">
+          {([
+            { id: 'square', label: 'Square', size: '1:1' },
+            { id: 'portrait', label: 'Portrait', size: '4:5' },
+            { id: 'story', label: 'Story / Status', size: '9:16' },
+          ] as const).map((format) => {
+            const selected = data.aspectRatio === format.id
+            return (
+              <button
+                key={format.id}
+                type="button"
+                onClick={() => onUpdate('aspectRatio', format.id)}
+                aria-pressed={selected}
+                className={`rounded-xl border px-2 py-3 text-center transition ${selected ? 'border-brand-500 bg-brand-500/10 text-brand-300 ring-2 ring-brand-500/25' : 'border-white/10 bg-slate-950/50 text-gray-400 hover:border-brand-400/60'}`}
+              >
+                <span className="block text-xs font-black">{format.label}</span>
+                <span className="mt-1 block text-[10px] opacity-70">{format.size}</span>
+              </button>
+            )
+          })}
+        </div>
+      </fieldset>
+
+      <fieldset>
         <legend className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">Ghali&apos;s photo</legend>
         <p className="mb-3 text-xs text-gray-500">Choose the portrait used across all sticker designs.</p>
         <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
