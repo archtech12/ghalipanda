@@ -1,4 +1,5 @@
 export const candidatePhotoOptions = [
+  { id: 'attire-cutout', label: 'Campaign Attire Portrait', src: '/assets/Attire%20Portrait%20Cutout.png' },
   { id: 'distinguished', label: 'Distinguished Portrait', src: '/assets/Distinguished%20Portrait.png' },
   { id: 'ghali-photo', label: 'Ghali Photo', src: '/assets/ghali%20pic.jpg' },
   { id: 'portrait-1', label: 'Portrait 1', src: '/assets/images/gallery/0-Portraits-Official/portrait-1.jpg' },

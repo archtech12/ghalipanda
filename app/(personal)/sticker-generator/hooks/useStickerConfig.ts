@@ -7,7 +7,7 @@ const DEFAULT_DATA: StickerData = {
     supporterPhoto: null,
     candidatePhoto: defaultCandidatePhoto,
     customMessage: 'Together We Rise',
-    templateId: 'classic',
+    templateId: 'classicV2',
     aspectRatio: 'square',
     showWatermark: true,
     colorTheme: 'green',
