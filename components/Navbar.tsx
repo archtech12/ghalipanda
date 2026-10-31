@@ -12,7 +12,6 @@ const desktopLinks = [
   { href: '/projects', label: 'Projects' },
   { href: '/legislative', label: 'Legislative' },
   { href: '/news', label: 'News' },
-  { href: '/contact', label: 'Contact' },
 ]
 
 const mobileLinks = [
@@ -20,11 +19,8 @@ const mobileLinks = [
   { href: '/about', label: 'About', icon: 'fa-user' },
   { href: '/constituency', label: 'Constituency', icon: 'fa-map-location-dot' },
   { href: '/projects', label: 'Projects', icon: 'fa-briefcase' },
-  { href: '/legislative', label: 'Legislative Work', icon: 'fa-gavel' },
+  { href: '/legislative', label: 'Legislative', icon: 'fa-gavel' },
   { href: '/news', label: 'News', icon: 'fa-newspaper' },
-  { href: '/sticker-generator', label: 'Sticker Generator', icon: 'fa-palette' },
-  { href: '/supporter-card', label: 'Support Card', icon: 'fa-id-card' },
-  { href: '/contact', label: 'Contact', icon: 'fa-paper-plane' },
 ]
 
 export function Navbar() {
@@ -119,12 +115,20 @@ export function Navbar() {
             ))}
             <div className="px-4 py-2">
               <Link
+                href="/sticker-generator"
+                onClick={closeMenu}
+                className="mb-2 flex w-full touch-manipulation items-center justify-center gap-2 rounded-xl border border-white/30 px-5 py-3.5 text-base font-bold text-white transition-colors hover:bg-white/10"
+              >
+                <i className="fa-solid fa-palette text-xl"></i>
+                <span>Create Sticker</span>
+              </Link>
+              <Link
                 href="/volunteer"
                 onClick={closeMenu}
                 className="flex w-full touch-manipulation items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-base font-bold text-green-700 shadow-lg transition-all hover:bg-green-50 active:scale-95 active:bg-green-100"
               >
                 <i className="fa-solid fa-hand-holding-heart text-xl"></i>
-                <span>Join Us as Volunteer</span>
+                <span>Join Us</span>
               </Link>
             </div>
             <div className="flex items-center gap-3 px-5 py-3.5 text-white">
