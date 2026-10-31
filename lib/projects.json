@@ -93,7 +93,7 @@
     "impact": "5 km of road constructed",
     "location": "Kwanar Nera to Chilori to Magamaru, Faragai Ward, Albasu LGA",
     "category": "Infrastructure",
-    "images": [],
+    "images": ["/images/projects/mugamu-cillori-road.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
@@ -105,7 +105,7 @@
     "impact": "2 km bypass road",
     "location": "Panda Town, Panda Ward, Albasu LGA",
     "category": "Infrastructure",
-    "images": [],
+    "images": ["/images/projects/panda-township-road.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
