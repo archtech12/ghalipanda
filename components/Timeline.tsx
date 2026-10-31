@@ -154,35 +154,35 @@ export const timelineData: TimelineItem[] = [
   {
     id: 1,
     title: "Early Life & Education",
-    description: "Born in Panda Town, Albasu LGA. Attended Panda Central Primary School and Usmanu Danfodiyo University, where he served as a student union leader.",
+    description: "Born on 13 August 1980 in Panda Town, Albasu, Kano State. He attended Panda Central Primary School and graduated from Usman Danfodio University in 2005, where he served as a Student Union leader.",
     date: "1980 - 2005",
     category: "personal"
   },
   {
     id: 2,
-    title: "Banking & Postgraduate Study",
-    description: "Completed NYSC at Diamond Bank, where he was retained, then earned an MSc in Oil and Gas from Glasgow Caledonian University.",
-    date: "2005 - 2009",
-    category: "philanthropic"
+    title: "Banking & Oil and Gas Career",
+    description: "After NYSC at Diamond Bank, where he was retained, he earned an MSc in Oil and Gas from Glasgow Caledonian University in 2009. He worked as Area Manager (North West) for Texaco/MRS Oil and Gas, earned a PhD in Oil and Gas from Robert Gordon University in 2014, and contributed as a consultant to Nigeria's National Gas Expansion Programme.",
+    date: "2005 - 2014",
+    category: "personal"
   },
   {
     id: 3,
-    title: "Oil & Gas Career",
-    description: "Worked as Area Manager (North West) for Texaco/MRS Oil and Gas, contributed to Nigeria’s National Gas Expansion programme and earned a PhD in Oil and Gas.",
-    date: "2009 - 2014",
-    category: "political"
+    title: "Community Service & Development",
+    description: "Before entering politics, he built a career in oil and gas consulting while supporting community development and opportunity across Kano State.",
+    date: "Before 2023",
+    category: "philanthropic"
   },
   {
     id: 4,
     title: "Elected to the House of Representatives",
-    description: "Elected to represent Albasu, Gaya and Ajingi Federal Constituency in the 10th National Assembly.",
+    description: "Elected in 2023 on the platform of the All Progressives Congress (APC) to represent Gaya, Ajingi, and Albasu Federal Constituency.",
     date: "2023",
     category: "political"
   },
   {
     id: 5,
-    title: "Committee Leadership & Constituency Projects",
-    description: "Serves as Chairman of the House Committee on Ethics and Privileges while advancing constituency projects in education, water, infrastructure, agriculture and empowerment.",
+    title: "Legislative Work & Community Projects",
+    description: "His public service includes legislative advocacy and projects supporting clean water, rural electrification, healthcare, education, agriculture, and livelihoods across the constituency.",
     date: "2023 - Present",
     category: "philanthropic"
   }

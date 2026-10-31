@@ -2,53 +2,56 @@ import './globals.css'
 import Script from 'next/script'
 import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
 import { Metadata, Viewport } from 'next'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ghalipanda.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Hon. Dr. Ghali Mustapha Tijjani | Albasu, Gaya & Ajingi',
-    template: '%s | Hon. Dr. Ghali Mustapha Tijjani',
+    default: 'Hon. Dr. Ghali Panda - Gaya, Ajingi, and Albasu Federal Constituency',
+    template: '%s | Hon. Dr. Ghali Panda',
   },
-  description: 'Official website of Hon. Dr. Ghali Mustapha Tijjani, Member representing Albasu, Gaya and Ajingi Federal Constituency in the House of Representatives.',
+  description: 'Official website of Hon. Dr. Ghali Mustapha Tijjani Panda, Member representing Gaya, Ajingi, and Albasu Federal Constituency in the House of Representatives.',
   keywords: [
-    'Ghali Mustapha Tijjani',
     'Ghali Panda',
-    'Albasu',
+    'Hon. Dr. Ghali Panda',
+    'Ghali Mustapha Tijjani',
     'Gaya',
     'Ajingi',
+    'Albasu',
     'Kano',
     'House of Representatives',
     'Nigeria Politics',
-    'Constituency projects',
+    'Ghali Panda 2027',
     'Community Development',
     'APC',
   ],
-  authors: [{ name: 'Hon. Dr. Ghali Mustapha Tijjani' }],
-  creator: 'Hon. Dr. Ghali Mustapha Tijjani',
-  publisher: 'Ghali Panda',
+  authors: [{ name: 'Hon. Dr. Ghali Panda' }],
+  creator: 'Hon. Dr. Ghali Panda Media Team',
+  publisher: 'Hon. Dr. Ghali Panda Media',
   openGraph: {
     type: 'website',
     locale: 'en_NG',
-    url: 'https://ghalipanda.vercel.app',
-    siteName: 'Hon. Dr. Ghali Mustapha Tijjani',
-    title: 'Hon. Dr. Ghali Mustapha Tijjani - Albasu, Gaya & Ajingi',
+    url: SITE_URL,
+    siteName: 'Hon. Dr. Ghali Panda Official',
+    title: 'Hon. Dr. Ghali Panda - Gaya, Ajingi, and Albasu Federal Constituency',
     description:
-      'Constituency projects and service for Albasu, Gaya and Ajingi Federal Constituency, Kano State.',
+      'Celebrating the impactful service of Hon. Dr. Ghali Panda in Gaya, Ajingi, and Albasu Federal Constituency. Delivering clean water, healthcare, electrification, and community empowerment.',
     images: [
       {
-        url: '/assets/Distinguished%20Portrait.png',
+        url: '/assets/images/gallery/0-Portraits-Official/portrait-1.jpg',
         width: 1200,
         height: 630,
-        alt: 'Hon. Dr. Ghali Mustapha Tijjani',
+        alt: 'Hon. Dr. Ghali Panda',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hon. Dr. Ghali Mustapha Tijjani - Albasu, Gaya & Ajingi',
+    title: 'Hon. Dr. Ghali Panda - Gaya, Ajingi, and Albasu Federal Constituency',
     description:
-      'Discover constituency projects and development initiatives across Albasu, Gaya and Ajingi.',
-    images: ['/assets/Distinguished%20Portrait.png'],
+      'Championing development across Gaya, Ajingi, and Albasu Federal Constituency.',
+    images: ['/assets/images/gallery/0-Portraits-Official/portrait-1.jpg'],
+    creator: '@HonGhaliPanda',
   },
   robots: {
     index: true,
@@ -63,14 +66,21 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/assets/images/favicon.ico' },
-      { url: '/assets/images/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/assets/images/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: [{ url: '/assets/images/apple-touch-icon.png' }],
+    apple: [
+      { url: '/assets/images/apple-touch-icon.png' },
+    ],
     other: [
-      { rel: 'android-chrome-192x192', url: '/assets/images/android-chrome-192x192.png' },
-      { rel: 'android-chrome-512x512', url: '/assets/images/android-chrome-512x512.png' },
+      {
+        rel: 'android-chrome-192x192',
+        url: '/assets/images/android-chrome-192x192.png',
+      },
+      {
+        rel: 'android-chrome-512x512',
+        url: '/assets/images/android-chrome-512x512.png',
+      },
     ],
   },
   manifest: '/assets/images/site.webmanifest',
