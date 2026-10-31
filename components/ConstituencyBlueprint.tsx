@@ -26,8 +26,8 @@ const blueprintPillars: BlueprintPillar[] = [
     icon: 'water_drop',
     tagline: 'Delivering industrial solar water systems and restoring existing boreholes to ensure safe drinking water.',
     badge: 'High Impact',
-    badgeColor: 'bg-blue-100 text-blue-800 border-blue-200',
-    accentColor: 'from-blue-600 to-cyan-700',
+    badgeColor: 'bg-green-50 text-green-800 border-green-200',
+    accentColor: 'from-green-700 to-yellow-500',
     deliverables: [
       '20,000-litre industrial solar-powered boreholes',
       'Restoration of 30+ broken community boreholes',
@@ -44,8 +44,8 @@ const blueprintPillars: BlueprintPillar[] = [
     icon: 'school',
     tagline: 'Investing in human capital, digital skills, and full scholarships for aspiring medical professionals.',
     badge: 'Human Capital',
-    badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-    accentColor: 'from-emerald-600 to-green-700',
+    badgeColor: 'bg-green-50 text-green-800 border-green-200',
+    accentColor: 'from-green-800 to-green-600',
     deliverables: [
       '60 full scholarships for Nursing & Midwifery students',
       'Equipped NITDA ICT Center in Panda Town',
@@ -62,8 +62,8 @@ const blueprintPillars: BlueprintPillar[] = [
     icon: 'solar_power',
     tagline: 'Connecting agricultural hubs through road networks and illuminating towns with renewable street lighting.',
     badge: 'Infrastructure',
-    badgeColor: 'bg-amber-100 text-amber-800 border-amber-200',
-    accentColor: 'from-amber-600 to-orange-700',
+    badgeColor: 'bg-amber-50 text-amber-800 border-amber-200',
+    accentColor: 'from-yellow-500 to-amber-400',
     deliverables: [
       '1,500+ solar-powered street lights installed',
       '5 km Faragai–Chilori–Magamaru inter-ward road',
@@ -80,8 +80,8 @@ const blueprintPillars: BlueprintPillar[] = [
     icon: 'agriculture',
     tagline: 'Equipping grassroots farmers with subsidized fertilizers, pest control, and mechanized machinery.',
     badge: 'Food Security',
-    badgeColor: 'bg-lime-100 text-lime-800 border-lime-200',
-    accentColor: 'from-green-700 to-emerald-800',
+    badgeColor: 'bg-amber-50 text-amber-800 border-amber-200',
+    accentColor: 'from-green-700 to-yellow-500',
     deliverables: [
       'Mass distribution of thousands of fertilizer bags',
       '4,000 pieces of agro-chemicals and sprayers',
@@ -98,8 +98,8 @@ const blueprintPillars: BlueprintPillar[] = [
     icon: 'diversity_3',
     tagline: 'Providing livelihood assets, transport vehicles, and seed funding for self-reliant businesses.',
     badge: 'Livelihoods',
-    badgeColor: 'bg-purple-100 text-purple-800 border-purple-200',
-    accentColor: 'from-purple-600 to-indigo-700',
+    badgeColor: 'bg-green-50 text-green-800 border-green-200',
+    accentColor: 'from-green-800 to-yellow-500',
     deliverables: [
       '100+ commercial motorcycles for youth transport',
       '500+ grinding and pasta-making machines for women',
@@ -116,8 +116,8 @@ const blueprintPillars: BlueprintPillar[] = [
     icon: 'gavel',
     tagline: 'Championing constituent-centered bills on the House floor and securing federal career placements.',
     badge: 'Governance',
-    badgeColor: 'bg-teal-100 text-teal-800 border-teal-200',
-    accentColor: 'from-teal-600 to-emerald-800',
+    badgeColor: 'bg-amber-50 text-amber-800 border-amber-200',
+    accentColor: 'from-green-800 to-green-600',
     deliverables: [
       'Active advocacy on energy, petroleum & local economy',
       'Federal career placements in security, aviation & civil service',
@@ -138,11 +138,11 @@ export function ConstituencyBlueprint() {
       : blueprintPillars.filter((p) => p.id === activeTab)
 
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
       {/* Decorative background grid and gradients */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(#15803d_0.75px,transparent_0.75px)] [background-size:20px_20px]"
+        className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(#166534_0.75px,transparent_0.75px)] [background-size:20px_20px]"
       />
       <div
         aria-hidden="true"
@@ -150,7 +150,7 @@ export function ConstituencyBlueprint() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-amber-200/30 blur-3xl"
+        className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-amber-200/25 blur-3xl"
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
