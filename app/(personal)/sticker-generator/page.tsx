@@ -359,7 +359,7 @@ export default function StickerGeneratorPage() {
                     </div>
                     
                     <div className="relative z-10">
-                       <LayoutSwitcher data={data} currentTemplate={data.templateId} onSelect={(id) => updateField('templateId', id)} />
+                       <LayoutSwitcher currentTemplate={data.templateId} onSelect={(id) => updateField('templateId', id)} />
                     </div>
                 </section>
 

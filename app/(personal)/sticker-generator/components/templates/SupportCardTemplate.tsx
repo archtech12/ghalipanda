@@ -1,6 +1,6 @@
 import { TemplateProps } from '../../types'
+import { defaultCandidatePhoto } from '../shared/candidatePhotos'
 
-const CANDIDATE_PHOTO_PATH = '/assets/Distinguished%20Portrait.png'
 const PARTY_LOGO_PATH = '/assets/images/gallery/0-Portraits-Official/APC2.png'
 
 const FingerprintIcon = ({ className = 'h-full w-full' }: { className?: string }) => (
@@ -141,7 +141,7 @@ export const SupportCardTemplate = ({ data }: TemplateProps) => {
         <div className="bg-white rounded-[2cqw] overflow-hidden shadow-xl flex flex-col border border-white/20">
           <div className="relative h-full bg-slate-900 overflow-hidden">
             <img
-              src={CANDIDATE_PHOTO_PATH}
+              src={data.candidatePhoto || defaultCandidatePhoto}
               crossOrigin="anonymous"
               alt="Hon. Dr. Ghali Panda"
               className="w-full h-full object-cover object-top"

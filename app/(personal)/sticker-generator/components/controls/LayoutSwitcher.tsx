@@ -1,13 +1,10 @@
 import { TemplateId } from '../../types'
-import { StickerData } from '../../types'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { StickerPreview } from '../StickerPreview'
 
 interface LayoutSwitcherProps {
   currentTemplate: TemplateId
   onSelect: (id: TemplateId) => void
-  data: StickerData
 }
 
 type Category = 'Recommended' | 'Classic' | 'Premium' | 'Editorial'
@@ -20,7 +17,7 @@ interface TemplateInfo {
   color: string
 }
 
-export const LayoutSwitcher = ({ currentTemplate, onSelect, data }: LayoutSwitcherProps) => {
+export const LayoutSwitcher = ({ currentTemplate, onSelect }: LayoutSwitcherProps) => {
   const [activeCategory, setActiveCategory] = useState<Category>('Recommended')
 
   const allTemplates: Record<TemplateId, TemplateInfo> = {
@@ -114,10 +111,8 @@ export const LayoutSwitcher = ({ currentTemplate, onSelect, data }: LayoutSwitch
                 )}
                 
                 {/* Visual Preview Placeholder */}
-                <div className={`relative h-24 sm:h-28 w-full overflow-hidden border-b border-slate-100/50 ${t.color}`}>
-                   <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-[1.04]">
-                     <StickerPreview data={{ ...data, templateId: id, aspectRatio: 'square' }} />
-                   </div>
+                <div className={`h-16 sm:h-20 w-full flex items-center justify-center border-b border-slate-100/50 ${t.color}`}>
+                   <span className="material-symbols-outlined text-3xl sm:text-4xl opacity-80 group-hover:scale-110 transition-transform duration-300">{t.icon}</span>
                 </div>
                 
                 <div className="p-2">

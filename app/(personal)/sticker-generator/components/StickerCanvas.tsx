@@ -12,8 +12,6 @@ interface StickerCanvasProps {
 
 const RATIOS: Record<AspectRatio, number> = {
   square: 1 / 1,
-  portrait: 4 / 5,
-  story: 9 / 16,
 }
 
 export const StickerCanvas = forwardRef<HTMLDivElement, StickerCanvasProps>(
