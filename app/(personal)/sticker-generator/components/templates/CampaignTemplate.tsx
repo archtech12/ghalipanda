@@ -1,5 +1,6 @@
 import { TemplateId, TemplateProps } from '../../types'
 import { CandidatePortrait } from '../shared/CandidatePortrait'
+import { defaultCandidatePhoto } from '../shared/candidatePhotos'
 import { FitText } from '../shared/FitText'
 
 type Palette = { ink: string; primary: string; accent: string; wash: string; paper: string }
@@ -118,7 +119,7 @@ export const CampaignTemplate = ({ data, variant }: TemplateProps & { variant: T
     <div className="flex h-[6cqw] w-[6cqw] shrink-0 items-center justify-center rounded-full border-[.25cqw] border-dashed" style={{ borderColor: palette.accent, color: palette.accent, fontSize: '1.4cqw' }}>✓</div>
   </div>
 
-  const portrait = <CandidatePortrait src={candidatePhotos[variant].src} imagePosition={candidatePhotos[variant].position} className="h-full w-full" />
+  const portrait = <CandidatePortrait src={data.candidatePhoto || defaultCandidatePhoto || candidatePhotos[variant].src} imagePosition={candidatePhotos[variant].position} className="h-full w-full" />
   const common = 'relative h-full w-full overflow-hidden select-none font-sans'
 
   if (meta.style === 'press') return <div className={`${common} p-[3cqw]`} style={{ containerType: 'inline-size', background: '#d8d2c5' }}><div className="relative flex h-full flex-col overflow-hidden border-[.55cqw] border-black bg-[#f8f3e8] shadow-[1.2cqw_1.2cqw_0_#000]"><div className="flex items-center justify-between bg-black px-[3cqw] py-[2cqw] text-white"><span className="font-black uppercase tracking-[.25em]" style={{ fontSize: '2.1cqw' }}>PRESS / SUPPORTER</span><span className="font-mono" style={{ color: palette.accent, fontSize: '1.6cqw' }}>#GHALIPANDA2027</span></div><div className="relative h-[38%] shrink-0 overflow-hidden">{portrait}<div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent" /><div className="absolute right-[3cqw] top-[3cqw] rotate-6 border-[.35cqw] bg-white px-[2cqw] py-[1cqw] font-black" style={{ borderColor: palette.primary, color: palette.primary, fontSize: '2cqw' }}>MEDIA<br />PASS</div></div><div className="shrink-0 border-y-[.35cqw] border-black bg-[#f8f3e8] px-[4cqw] py-[2cqw]"><CandidateName /></div><div className="grid flex-1 grid-cols-[30%_1fr] gap-[3cqw] p-[3cqw]"><SupporterPhoto src={data.supporterPhoto} palette={palette} shape="square" /><div><p className="font-black uppercase tracking-[.2em]" style={{ fontSize: '1.25cqw' }}>Accredited supporter</p><FitText text={supporter} maxFontSizeCqw={3.3} optimalLength={15} className="font-black uppercase" /><p className="font-serif italic" style={{ color: palette.primary, fontSize: '1.8cqw' }}>“{message}”</p></div></div></div></div>

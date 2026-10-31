@@ -3,6 +3,7 @@ import { useState, useRef } from 'react'
 import PhotoCropper from '../PhotoCropper'
 import { getCroppedImg } from '../../utils/cropImage'
 import { Area } from 'react-easy-crop'
+import { candidatePhotoOptions } from '../shared/candidatePhotos'
 
 interface TextControlsProps {
   data: StickerData
@@ -49,6 +50,29 @@ export const TextControls = ({ data, onUpdate }: TextControlsProps) => {
 
   return (
     <div className="space-y-6">
+
+      <fieldset>
+        <legend className="mb-3 text-xs font-black uppercase tracking-widest text-gray-400">Ghali&apos;s photo</legend>
+        <p className="mb-3 text-xs text-gray-500">Choose the portrait used across all sticker designs.</p>
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
+          {candidatePhotoOptions.map((photo) => {
+            const selected = data.candidatePhoto === photo.src
+            return (
+              <button
+                key={photo.id}
+                type="button"
+                onClick={() => onUpdate('candidatePhoto', photo.src)}
+                aria-pressed={selected}
+                aria-label={`Use ${photo.label} on all designs`}
+                className={`overflow-hidden rounded-lg border-2 text-left transition ${selected ? 'border-brand-500 ring-2 ring-brand-500/30' : 'border-white/10 hover:border-brand-300'}`}
+              >
+                <img src={photo.src} alt="" className="aspect-square w-full object-cover" />
+                <span className="block truncate px-1.5 py-1 text-[10px] font-bold text-gray-300">{photo.label}</span>
+              </button>
+            )
+          })}
+        </div>
+      </fieldset>
       
       {/* Photo Upload */}
       <div>

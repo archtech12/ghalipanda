@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { StickerData, TemplateId, AspectRatio } from '../types'
+import { defaultCandidatePhoto } from '../components/shared/candidatePhotos'
 
 const DEFAULT_DATA: StickerData = {
     supporterName: '',
     supporterPhoto: null,
+    candidatePhoto: defaultCandidatePhoto,
     customMessage: 'Together We Rise',
     templateId: 'classic',
     aspectRatio: 'square',

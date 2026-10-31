@@ -229,10 +229,10 @@ export default function ProjectsPage() {
             {groupedProjects.map(([category, items]) => (
               <section key={category} aria-labelledby={`cat-${category}`}>
                 <div className="mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
-                  <div className={`flex h-12 w-12 items-center justify-center rounded-full ${getCategoryColor(category)}`}>
-                    <span className="material-symbols-outlined">{getCategoryIcon(category)}</span>
+                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full sm:h-12 sm:w-12 ${getCategoryColor(category)}`}>
+                    <span className="material-symbols-outlined text-xl sm:text-2xl">{getCategoryIcon(category)}</span>
                   </div>
-                  <h2 id={`cat-${category}`} className="text-3xl font-black uppercase tracking-tight text-gray-900">
+                  <h2 id={`cat-${category}`} className="text-xl font-black uppercase tracking-tight text-gray-900 sm:text-2xl lg:text-3xl">
                     {category}
                   </h2>
                   <span className="ml-auto rounded-full bg-gray-100 px-3 py-1 text-sm font-bold text-gray-600">

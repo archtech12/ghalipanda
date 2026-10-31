@@ -4,6 +4,7 @@ export type AspectRatio = 'square'
 export interface StickerData {
   supporterName: string
   supporterPhoto: string | null
+  candidatePhoto: string
   customMessage: string
   templateId: TemplateId
   aspectRatio: AspectRatio
