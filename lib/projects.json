@@ -279,18 +279,6 @@
     "date": "2023–2026"
   },
   {
-    "_id": "ghali-governance-ghalimetre",
-    "title": "Ghalimetre Accountability System",
-    "titleHA": "Tsarin Ghalimetre na Bayyana Ayyuka",
-    "description": "Digital project-tracking platform for public monitoring of constituency projects.",
-    "impact": "Citizen project monitoring",
-    "location": "Online",
-    "category": "Governance",
-    "images": [],
-    "status": "Ongoing",
-    "date": "2024–2026"
-  },
-  {
     "_id": "ghali-health-faragai-hospital",
     "title": "Faragai Hospital Construction",
     "titleHA": "Ginin Asibitin Faragai",
