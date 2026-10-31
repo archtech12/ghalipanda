@@ -7,7 +7,7 @@
     "impact": "Multiple 3-block classrooms completed + ongoing projects",
     "location": "Kalhaddi, Gaya Arewa, Gaya Kudu, Tsangaya, Daho, Unguwar Bai, Gagarami, Albasu Ward, Saya Saya and other communities",
     "category": "Education",
-    "images": ["/assets/images/gallery/6-Education/school-block-ganuwa-toranke-ajingi-2024.jpg", "/assets/images/ghali%20pics/school%20block.jpg", "/assets/images/ghali%20pics/block%20classrooms.jpg"],
+    "images": ["/assets/images/gallery/6-Education/school-block-ganuwa-toranke-ajingi-2024.jpg", "/images/projects/school-block.jpg", "/images/projects/block-classrooms.jpg"],
     "status": "Completed + Ongoing",
     "date": "2023–2026"
   },
@@ -19,7 +19,7 @@
     "impact": "1 fully equipped ICT center",
     "location": "Panda Ward, Albasu LGA",
     "category": "Education",
-    "images": ["/assets/images/ghali%20pics/nitda%20ict.jpg"],
+    "images": ["/images/projects/nitda-ict.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
@@ -142,7 +142,7 @@
     "impact": "4+ transformers and grid extensions",
     "location": "Kwalele Village, Panda Town, Faragai–Bataiya and Umbara Town",
     "category": "Infrastructure",
-    "images": ["/assets/images/ghali%20pics/batayya%20electrification.jpg"],
+    "images": ["/images/projects/batayya-electrification.jpg"],
     "status": "Completed + Ongoing",
     "date": "2024–2025"
   },
@@ -166,7 +166,7 @@
     "impact": "4,000 pieces distributed",
     "location": "Albasu, Gaya and Ajingi LGAs",
     "category": "Agriculture",
-    "images": ["/assets/images/ghali%20pics/hervicides.jpg"],
+    "images": ["/images/projects/herbicides.jpg"],
     "status": "Completed",
     "date": "2024"
   },
@@ -178,7 +178,7 @@
     "impact": "Tractors donated to LGAs",
     "location": "Albasu, Gaya and Ajingi LGAs",
     "category": "Agriculture",
-    "images": ["/assets/images/ghali%20pics/trackor.jpg"],
+    "images": ["/images/projects/tractor.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
@@ -190,7 +190,7 @@
     "impact": "Over 100 motorcycles distributed",
     "location": "Albasu, Gaya and Ajingi LGAs",
     "category": "Youth Empowerment",
-    "images": ["/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-albasu-6units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-gaya-10units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-ajingi-5units-dec2024-1.jpg", "/assets/images/ghali%20pics/motorcycle.jpg"],
+    "images": ["/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-albasu-6units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-gaya-10units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-ajingi-5units-dec2024-1.jpg", "/images/projects/motorcycle.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
@@ -202,7 +202,7 @@
     "impact": "400 sewing machines",
     "location": "All wards across the constituency",
     "category": "Empowerment",
-    "images": ["/assets/images/ghali%20pics/sewing.jpg"],
+    "images": ["/images/projects/sewing.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
@@ -214,7 +214,7 @@
     "impact": "Over 100 + 400 beneficiaries",
     "location": "Albasu, Gaya and Ajingi LGAs",
     "category": "Empowerment",
-    "images": ["/assets/images/ghali%20pics/grinding%20machine.jpg"],
+    "images": ["/images/projects/grinding-machine.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
@@ -262,7 +262,7 @@
     "impact": "50+ placements, including PTDF scholarships",
     "location": "Across the constituency",
     "category": "Employment",
-    "images": ["/assets/images/ghali%20pics/security%20offer.jpg"],
+    "images": ["/images/projects/security-offer.jpg"],
     "status": "Ongoing",
     "date": "2023–2026"
   },
