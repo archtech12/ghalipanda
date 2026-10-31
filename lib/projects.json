@@ -44,7 +44,7 @@
     "impact": "13+ schools under renovation",
     "location": "GSS Ajingi, Maimakawa, Balan, Wudilawa, Unguwar Bai, Saya Saya and other communities",
     "category": "Education",
-    "images": ["/assets/images/gallery/6-Education/school-block-hirullahi-bataiya-albasu-2024.jpg"],
+    "images": ["/images/projects/school-renovation.png", "/assets/images/gallery/6-Education/school-block-hirullahi-bataiya-albasu-2024.jpg"],
     "status": "Ongoing",
     "date": "2025–2026"
   },
@@ -190,7 +190,7 @@
     "impact": "Over 100 motorcycles distributed",
     "location": "Albasu, Gaya and Ajingi LGAs",
     "category": "Youth Empowerment",
-    "images": ["/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-albasu-6units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-gaya-10units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-ajingi-5units-dec2024-1.jpg", "/images/projects/motorcycle.jpg"],
+    "images": ["/images/projects/motorcycle-empowerment.png", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-albasu-6units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-gaya-10units-dec2024-1.jpg", "/assets/images/gallery/4-Youth-Women-Empowerment/motorcycle-handover-ajingi-5units-dec2024-1.jpg", "/images/projects/motorcycle.jpg"],
     "status": "Completed",
     "date": "2024–2025"
   },
