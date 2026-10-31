@@ -6,10 +6,10 @@ import Link from 'next/link'
 
 // Official Candidates Photos
 const CANDIDATE_PHOTOS = [
-  { id: 'portrait_smile', label: 'Official Smiling Cap', src: '/assets/images/gallery/0-Portraits-Official/portrait-1.jpg' },
-  { id: 'portrait_white', label: 'Traditional Attire', src: '/assets/images/gallery/0-Portraits-Official/portrait-2.jpg' },
+  { id: 'portrait_smile', label: 'Official Smiling Cap', src: '/assets/Distinguished%20Portrait.png' },
+  { id: 'portrait_white', label: 'Traditional Attire', src: '/assets/Distinguished%20Portrait.png' },
   { id: 'portrait_classic', label: 'Classic Formal', src: '/assets/images/gallery/0-Portraits-Official/portrait-3.jpg' },
-  { id: 'portrait_hero', label: 'Leader Pose', src: '/assets/ghaliphoto.jpg' },
+  { id: 'portrait_hero', label: 'Leader Pose', src: '/assets/Distinguished%20Portrait.png' },
 ]
 
 const PARTY_LOGO_PATH = '/assets/images/gallery/0-Portraits-Official/APC2.png'

@@ -1,1 +1,1 @@
-export const CANDIDATE_BASE64 = '/assets/ghali%20pic.jpg'
+export const CANDIDATE_BASE64 = '/assets/Distinguished%20Portrait.png'

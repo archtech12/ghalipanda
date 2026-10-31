@@ -46,7 +46,7 @@ export function HomePage({ data }: HomePageProps) {
           <div className="absolute inset-4 rounded-full bg-emerald-400/20 blur-2xl" aria-hidden="true" />
           <div className="relative aspect-square overflow-hidden rounded-full border-[10px] border-white/15 bg-green-900 shadow-2xl ring-1 ring-white/20">
             <Image
-              src="/assets/images/gallery/0-Portraits-Official/portrait-1.jpg"
+              src="/assets/Distinguished%20Portrait.png"
               alt={title}
               fill
               priority

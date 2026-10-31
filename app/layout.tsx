@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Celebrating the impactful service of Hon. Dr. Ghali Panda in Gaya, Ajingi, and Albasu Federal Constituency. Delivering clean water, healthcare, electrification, and community empowerment.',
     images: [
       {
-        url: '/assets/images/gallery/0-Portraits-Official/portrait-1.jpg',
+        url: '/assets/Distinguished%20Portrait.png',
         width: 1200,
         height: 630,
         alt: 'Hon. Dr. Ghali Panda',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'Hon. Dr. Ghali Panda - Gaya, Ajingi, and Albasu Federal Constituency',
     description:
       'Championing development across Gaya, Ajingi, and Albasu Federal Constituency.',
-    images: ['/assets/images/gallery/0-Portraits-Official/portrait-1.jpg'],
+    images: ['/assets/Distinguished%20Portrait.png'],
     creator: '@HonGhaliPanda',
   },
   robots: {

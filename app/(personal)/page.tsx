@@ -296,7 +296,7 @@ export default function IndexRoute() {
         <div className="container mx-auto px-4 md:px-8 grid gap-8 md:grid-cols-2 items-center max-w-6xl">
           <div className="relative mx-auto w-full max-w-sm aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
             <Image
-              src="/assets/images/gallery/0-Portraits-Official/portrait-2.jpg"
+              src="/assets/Distinguished%20Portrait.png"
               alt="Hon. Dr. Ghali Mustapha Tijjani"
               fill
               sizes="(max-width: 768px) 90vw, 384px"

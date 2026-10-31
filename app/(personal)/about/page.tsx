@@ -103,7 +103,7 @@ export default function AboutPage() {
                 {/* photo */}
                 <div className="relative w-full h-64 sm:h-72">
                   <Image
-                    src="/assets/images/gallery/0-Portraits-Official/portrait-1.jpg"
+                    src="/assets/Distinguished%20Portrait.png"
                     alt="Hon. Dr. Ghali Panda"
                     fill
                     className="object-cover"

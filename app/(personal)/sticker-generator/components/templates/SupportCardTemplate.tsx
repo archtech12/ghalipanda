@@ -1,6 +1,6 @@
 import { TemplateProps } from '../../types'
 
-const CANDIDATE_PHOTO_PATH = '/assets/images/gallery/0-Portraits-Official/portrait-1.jpg'
+const CANDIDATE_PHOTO_PATH = '/assets/Distinguished%20Portrait.png'
 const PARTY_LOGO_PATH = '/assets/images/gallery/0-Portraits-Official/APC2.png'
 
 const FingerprintIcon = ({ className = 'h-full w-full' }: { className?: string }) => (
